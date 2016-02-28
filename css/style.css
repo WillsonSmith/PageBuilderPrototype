@@ -1,0 +1,58 @@
+:root {
+  --spacing: 15px;
+  --layout-width: 960px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;;
+}
+
+.banner {
+  border: 1px solid #ececec;
+  border-radius: 3px;
+
+  margin: var(--spacing);
+  padding: var(--spacing);
+
+  >* + * {
+    margin: var(--spacing) 0 0 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    color: #3c3c3c;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: var(--layout-width);
+}
+
+.layout__full {
+  flex: 1 1 100%;
+}
+
+.layout__primary {
+  flex: 2 1 400px;
+}
+
+.layout__secondary {
+  flex: 1 1 200px;
+}
