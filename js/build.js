@@ -46,7 +46,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       var subList = document.createElement('ul');
       var title = document.createElement('p');
       title.textContent = key;
-      subList.appendChild(title);
+      listItem.appendChild(title);
 
       components[key].forEach(function (component) {
         var item = document.createElement('li');
@@ -61,6 +61,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   }
   /* end */
 
-  // console.log(getComponents());
+  // temp stuff for demo
   buildComponentList(getComponents());
+  document.getElementById('addBanner').addEventListener('click', function () {
+    addToElement(getComponents().information[0].source, document.querySelector('.container'));
+  });
 })();

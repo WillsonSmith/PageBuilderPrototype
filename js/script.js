@@ -44,7 +44,7 @@
       let subList = document.createElement('ul');
       let title = document.createElement('p');
       title.textContent = key;
-      subList.appendChild(title);
+      listItem.appendChild(title);
 
       components[key].forEach(function(component) {
         let item = document.createElement('li');
@@ -60,6 +60,10 @@
   }
 /* end */
 
-  // console.log(getComponents());
+
+// temp stuff for demo
   buildComponentList(getComponents());
+  document.getElementById('addBanner').addEventListener('click', function() {
+    addToElement(getComponents().information[0].source, document.querySelector('.container'))
+  })
 })();
